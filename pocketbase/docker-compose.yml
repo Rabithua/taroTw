@@ -1,0 +1,18 @@
+services:
+  pocketbase:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PB_VERSION: 0.35.0
+    container_name: pocketbase
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./pb_data:/pb/pb_data
+      - ./pb_migrations:/pb/pb_migrations
+    restart: unless-stopped
+    # 可选：自动创建初始 superuser（取消注释并设置邮箱密码）
+    # environment:
+    #   PB_ADMIN_EMAIL: admin@example.com
+    #   PB_ADMIN_PASSWORD: your-secure-password

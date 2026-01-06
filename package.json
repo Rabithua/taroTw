@@ -30,6 +30,10 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:harmony-hybrid": "npm run build:harmony-hybrid -- --watch",
+    "dev:pb": "docker-compose -f pocketbase/docker-compose.yml up -d",
+    "dev:pb:stop": "docker-compose -f pocketbase/docker-compose.yml down",
+    "dev:pb:logs": "docker-compose -f pocketbase/docker-compose.yml logs -f",
+    "dev:pb:restart": "docker-compose -f pocketbase/docker-compose.yml restart",
     "postinstall": "weapp-tw patch"
   },
   "browserslist": [

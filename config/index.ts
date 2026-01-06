@@ -21,6 +21,7 @@ export default defineConfig<'vite'>(async (merge, { command: _command, mode: _mo
     },
     sourceRoot: 'src',
     outputRoot: 'dist',
+    entry: 'src/app.tsx',
     plugins: ['@tarojs/plugin-generator'],
     defineConstants: {},
     copy: {
@@ -67,6 +68,9 @@ export default defineConfig<'vite'>(async (merge, { command: _command, mode: _mo
     h5: {
       publicPath: '/',
       staticDirectory: 'static',
+      router: {
+        mode: 'browser',
+      },
 
       miniCssExtractPluginOption: {
         ignoreOrder: true,

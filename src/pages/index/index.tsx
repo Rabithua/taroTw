@@ -2,7 +2,6 @@ import { View, Text, Button } from '@tarojs/components'
 import { useLoad } from '@tarojs/taro'
 import { useAppSelector, useAppDispatch } from '../../store/hooks'
 import { setTheme } from '../../store/slices/appSlice'
-import './index.css'
 
 export default function Index() {
   const dispatch = useAppDispatch()

@@ -19,3 +19,5 @@ avoid abusing scrollview unless necessary
 use redux toolkit for state management
 
 use Icon component for icons instead of image
+
+avoid useing Text

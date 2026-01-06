@@ -55,6 +55,7 @@
     "@tarojs/runtime": "4.1.9",
     "@tarojs/shared": "4.1.9",
     "@tarojs/taro": "4.1.9",
+    "lucide": "^0.562.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

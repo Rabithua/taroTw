@@ -23,8 +23,11 @@ export default defineConfig<'vite'>(async (merge, { command: _command, mode: _mo
     outputRoot: 'dist',
     plugins: ['@tarojs/plugin-generator'],
     defineConstants: {},
+    alias: {
+      '@': path.resolve(__dirname, '..', 'src'),
+    },
     copy: {
-      patterns: [],
+      patterns: [{ from: 'src/theme.json', to: 'theme.json' }],
       options: {},
     },
     framework: 'react',

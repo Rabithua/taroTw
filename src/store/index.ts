@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { createLogger } from 'redux-logger'
-import userReducer from './slices/userSlice'
-import appReducer from './slices/appSlice'
+import userReducer from '@/store/slices/userSlice'
+import appReducer from '@/store/slices/appSlice'
 // import groupReducer from "./slices/groupSlice";
 
 export default function configStore() {

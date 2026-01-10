@@ -1,6 +1,6 @@
 import { Action } from 'redux'
 import { ThunkAction } from 'redux-thunk'
-import configStore from '../store/index'
+import configStore from '@/store/index'
 
 // Store 类型定义
 export type AppStore = ReturnType<typeof configStore>

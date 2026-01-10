@@ -9,6 +9,10 @@ import prodConfig from './prod'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'vite'>(async (merge, { command: _command, mode: _mode }) => {
+  // 根据 TARO_ENV 确定输出目录
+  const taroEnv = process.env.TARO_ENV || 'weapp'
+  const outputRoot = `dist/${taroEnv}`
+
   const baseConfig: UserConfigExport<'vite'> = {
     projectName: 'taroTw',
     date: '2025-12-29',
@@ -20,7 +24,7 @@ export default defineConfig<'vite'>(async (merge, { command: _command, mode: _mo
       828: 1.81 / 2,
     },
     sourceRoot: 'src',
-    outputRoot: 'dist',
+    outputRoot,
     plugins: ['@tarojs/plugin-generator'],
     defineConstants: {},
     alias: {

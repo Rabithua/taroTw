@@ -6,3 +6,13 @@ node_modules/
 .DS_Store
 .swc
 *.local
+
+# 环境变量本地覆盖文件
+.env.local
+.env.*.local
+
+# PocketBase
+pocketbase/pb_data/
+!pocketbase/pb_data/types.d.ts
+pocketbase/backups/
+pocketbase/pocketbase

@@ -10,7 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
+    "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "sourceMap": true,

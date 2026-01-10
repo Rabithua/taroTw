@@ -71,17 +71,17 @@ function svgPropToBase64(
 export const Icon = React.memo(
   (props: { icon: IconNode; size?: number; color?: string; strokeWidth?: number }) => {
     const { size = 24, color = 'currentColor', strokeWidth = 1 } = props
-    // Convert rpx to px for SVG (rpx / 2 = px on most devices)
-    const pxSize = size / 2
+
     return (
       <Image
         style={{
-          width: `${size}rpx`,
-          height: `${size}rpx`,
+          width: `${size}px`,
+          height: `${size}px`,
+          display: 'block',
         }}
         src={svgPropToBase64(props.icon, {
-          width: pxSize,
-          height: pxSize,
+          width: size,
+          height: size,
           color: color,
           strokeWidth: strokeWidth,
         })}
